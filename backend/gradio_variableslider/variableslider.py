@@ -41,6 +41,7 @@ class VariableSlider(FormComponent):
         elem_id: str | None = None,
         elem_classes: list[str] | str | None = None,
         render: bool = True,
+        spinner: bool = True # arrow spinner control
     ):
         """
         Parameters:
@@ -60,7 +61,9 @@ class VariableSlider(FormComponent):
             elem_id: An optional string that is assigned as the id of this component in the HTML DOM. Can be used for targeting CSS styles.
             elem_classes: An optional list of strings that are assigned as the classes of this component in the HTML DOM. Can be used for targeting CSS styles.
             render: If False, component will not render be rendered in the Blocks context. Should be used if the intention is to assign event listeners now but render the component later.
+            spinner: If False, the component will disable HTML arrow spinners as a way to set slider value. If True, users can use the either the arrow spinners or the slider knob to set a value.
         """
+        self.spinner = spinner
         self.minimum = minimum
         self.maximum = maximum
         if step is None:

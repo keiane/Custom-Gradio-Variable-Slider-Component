@@ -30,6 +30,7 @@
 	export let interactive: boolean;
 	export let loading_status: LoadingStatus;
 	export let value_is_output = false;
+	export let spinner: boolean = true;
 
 	let rangeInput: HTMLInputElement;
 	let numberInput: HTMLInputElement;
@@ -108,7 +109,8 @@
 				on:blur={clamp}
 				{step}
 				{disabled}
-				readonly
+				readonly={!spinner}
+    			class="{spinner ? 'input-editable' : 'input-readonly'}"
 			/>
 		</div>
 	</div>
@@ -126,8 +128,9 @@
 		on:input={adjustValue}
 		aria-label={`range slider for ${label}`}
 	/>
-	<!--Shows the slider value -->
-	<p>Value: {value}</p>
+	<!-- Shows the slider value -->
+	<!-- <p>Value: {value}</p> -->
+	<p>Spinner: {spinner}</p>
 </Block>
 
 <style>
@@ -140,6 +143,16 @@
 	.head {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.input-editable {
+		background-color: white; /* Editable background */
+		color: black; /* Editable text color */
+	}
+
+	.input-readonly {
+		background-color: #ccc; /* Readonly background */
+		color: #888; /* Readonly text color */
 	}
 
 	input[type="number"] {
@@ -241,7 +254,7 @@
 		height: 12px;
 	}
 
-	/* Remove spinners from number text input */
+/* Remove spinners from number text input */
 	/* Chrome, Safari, Edge, Opera */
     input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button {
@@ -253,4 +266,5 @@
     input[type="number"] {
         -moz-appearance: textfield;
     }
+
 </style>
