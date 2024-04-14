@@ -70,7 +70,7 @@
 	function adjustValue(event) {
 		let sliderValue = parseFloat(event.target.value);
 		if (Number.isInteger(sliderValue)) {
-			sliderValue += sliderValue + step <= event.target.max ? step / 2 : -step / 2;
+			sliderValue += sliderValue + step <= event.target.max ? step: -step;
 			value = sliderValue
 		}
 	}
