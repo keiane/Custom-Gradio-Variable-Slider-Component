@@ -1,16 +1,8 @@
 
 # `gradio_variableslider`
-<img alt="Static Badge" src="https://img.shields.io/badge/version%20-%200.0.1%20-%20orange">  
+<a href="https://pypi.org/project/gradio_variableslider/" target="_blank"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/gradio_variableslider"></a>  
 
-Gradio component dedicated to show only float values for a slider completely excluding whole numbers and integers.
-
-For example, a step value of 0.2 will iterate as: 
-`0.2 0.4 0.6 0.8 1.2 1.4 1.6 1.8 2.2 2.4 2.6 2.8 3.2 3.4` 
-...skipping over integers 1 and 3.
-
-A step of 0.05 would iterate as:
-`1.90 1.95 2.05 2.1 `
-...skipping over integer 2.
+Python library for easily interacting with trained machine learning models
 
 ## Installation
 
@@ -274,3 +266,24 @@ bool
 | `input` | This listener is triggered when the user changes the value of the VariableSlider. |
 | `release` | This listener is triggered when the user releases the mouse on this VariableSlider. |
 
+
+
+### User function
+
+The impact on the users predict function varies depending on whether the component is used as an input or output for an event (or both).
+
+- When used as an Input, the component only impacts the input signature of the user function.
+- When used as an output, the component only impacts the return signature of the user function.
+
+The code snippet below is accurate in cases where the component is used as both an input and an output.
+
+- **As output:** Is passed, passes slider value as a {float} into the function.
+- **As input:** Should return, expects an {int} or {float} returned from function and sets slider value to it as long as it is within range (otherwise, sets to minimum value).
+
+ ```python
+ def predict(
+     value: float
+ ) -> float | None:
+     return value
+ ```
+ 
