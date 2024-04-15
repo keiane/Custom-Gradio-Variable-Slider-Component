@@ -1,19 +1,24 @@
 
-# gradio_variableslider
-This Gradio component is dedicated to show only float values for a slider completely excluding whole numbers and integers.
+# `gradio_variableslider`
+<img alt="Static Badge" src="https://img.shields.io/badge/version%20-%200.0.1%20-%20orange">  
 
-For example, a step value of 0.2 will iterate as:
-`0.2 0.4 0.6 0.8 1.2 1.4 1.6 1.8 2.2 2.4 2.6 2.8 3.2 3.4`
+Gradio component dedicated to show only float values for a slider completely excluding whole numbers and integers.
+
+For example, a step value of 0.2 will iterate as: 
+`0.2 0.4 0.6 0.8 1.2 1.4 1.6 1.8 2.2 2.4 2.6 2.8 3.2 3.4` 
 ...skipping over integers 1 and 3.
 
-<br>
 A step of 0.05 would iterate as:
-
-`1.90 1.95 2.05 2.1`
+`1.90 1.95 2.05 2.1 `
 ...skipping over integer 2.
 
+## Installation
 
-## Example usage
+```bash
+pip install gradio_variableslider
+```
+
+## Usage
 
 ```python
 
@@ -28,7 +33,7 @@ with gr.Blocks() as demo:
         step = round(1/slider_val, 3)
         slider_final = VariableSlider(minimum=0, maximum=3, value=0, step=step, interactive=True)
         return slider_final
-    float_values = VariableSlider(label="Alpha", minimum=0, maximum=2.99, step=0.01, interactive=True)
+    alpha_slider = VariableSlider(label="Alpha", minimum=0, maximum=2.99, step=0.01, interactive=True)
     sub_slider.release(fn=slider_function, inputs=sub_slider, outputs=alpha_slider)
 
 
@@ -36,8 +41,236 @@ if __name__ == "__main__":
     demo.queue().launch()
 
 ```
-The example code above will allow users to iterate through a slider called `sub_slider`, labeled as `Sub-Divisions` which controls the amount of values between each integer. Changing this value will return another slider, `float_slider` which will be the `VariableSlider` custom component. Sliding the slider knob will skip over each integer set by the `minimum` and `maximum` parameters. Here, the returned slider will have the parameters, `minimum=0` and `maximum=3`. Therefore, the `VariableSlider` custom component will skip over integers 0, 1, 2, and 3.
 
-## Changes made to the original `gradio.Slider()` component
-- The `randomize` parameter was removed as it was not needed for the intended functionality. This is reflected in `variableslider.py`
-- The HTML arrow buttons or "spinners" have been disabled. Additionally, the number form has been set to `readonly` to prevent users from manually typing out-of-range values or integers into the HTML input component. The user should only be able to use the slider knob to set the slider value. These changes are reflected in `Index.svelte`.
+## `VariableSlider`
+
+### Initialization
+
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="left" style="width: 25%;">type</th>
+<th align="left">default</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>minimum</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float
+```
+
+</td>
+<td align="left"><code>0</code></td>
+<td align="left">minimum value for slider.</td>
+</tr>
+
+<tr>
+<td align="left"><code>maximum</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float
+```
+
+</td>
+<td align="left"><code>100</code></td>
+<td align="left">maximum value for slider.</td>
+</tr>
+
+<tr>
+<td align="left"><code>value</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float | Callable | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">default value. If callable, the function will be called whenever the app loads to set the initial value of the component. Ignored if randomized=True.</td>
+</tr>
+
+<tr>
+<td align="left"><code>step</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">increment between slider values.</td>
+</tr>
+
+<tr>
+<td align="left"><code>label</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">The label for this component. Appears above the component and is also used as the header if there are a table of examples for this component. If None and used in a `gr.Interface`, the label will be the name of the parameter this component is assigned to.</td>
+</tr>
+
+<tr>
+<td align="left"><code>info</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">additional component description.</td>
+</tr>
+
+<tr>
+<td align="left"><code>every</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">If `value` is a callable, run the function 'every' number of seconds while the client connection is open. Has no effect otherwise. The event can be accessed (e.g. to cancel it) via this component's .load_event attribute.</td>
+</tr>
+
+<tr>
+<td align="left"><code>show_label</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">if True, will display label.</td>
+</tr>
+
+<tr>
+<td align="left"><code>container</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">If True, will place the component in a container - providing some extra padding around the border.</td>
+</tr>
+
+<tr>
+<td align="left"><code>scale</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">relative size compared to adjacent Components. For example if Components A and B are in a Row, and A has scale=2, and B has scale=1, A will be twice as wide as B. Should be an integer. scale applies in Rows, and to top-level Components in Blocks where fill_height=True.</td>
+</tr>
+
+<tr>
+<td align="left"><code>min_width</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int
+```
+
+</td>
+<td align="left"><code>160</code></td>
+<td align="left">minimum pixel width, will wrap if not sufficient screen space to satisfy this value. If a certain scale value results in this Component being narrower than min_width, the min_width parameter will be respected first.</td>
+</tr>
+
+<tr>
+<td align="left"><code>interactive</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">if True, slider will be adjustable; if False, adjusting will be disabled. If not provided, this is inferred based on whether the component is used as an input or output.</td>
+</tr>
+
+<tr>
+<td align="left"><code>visible</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">If False, component will be hidden.</td>
+</tr>
+
+<tr>
+<td align="left"><code>elem_id</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">An optional string that is assigned as the id of this component in the HTML DOM. Can be used for targeting CSS styles.</td>
+</tr>
+
+<tr>
+<td align="left"><code>elem_classes</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+list[str] | str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">An optional list of strings that are assigned as the classes of this component in the HTML DOM. Can be used for targeting CSS styles.</td>
+</tr>
+
+<tr>
+<td align="left"><code>render</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">If False, component will not render be rendered in the Blocks context. Should be used if the intention is to assign event listeners now but render the component later.</td>
+</tr>
+</tbody></table>
+
+
+### Events
+
+| name | description |
+|:-----|:------------|
+| `change` | Triggered when the value of the VariableSlider changes either because of user input (e.g. a user types in a textbox) OR because of a function update (e.g. an image receives a value from the output of an event trigger). See `.input()` for a listener that is only triggered by user input. |
+| `input` | This listener is triggered when the user changes the value of the VariableSlider. |
+| `release` | This listener is triggered when the user releases the mouse on this VariableSlider. |
+
