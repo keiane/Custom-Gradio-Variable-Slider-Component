@@ -127,7 +127,7 @@
 		aria-label={`range slider for ${label}`}
 	/>
 	<!--Shows the slider value -->
-	<p>Value: {value}</p>
+	<!-- <p>Value: {value}</p> -->
 </Block>
 
 <style>
