@@ -75,13 +75,6 @@
 		}
 	}
 
-	function disableArrowKeyInput(event: KeyboardEvent): void {
-        // Prevent default action if the key pressed is an arrow key
-        if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-            event.preventDefault();
-        }
-    }
-
 
 	$: disabled = !interactive;
 
@@ -131,7 +124,6 @@
 		{step}
 		{disabled}
 		on:input={adjustValue}
-		on:keydown={disableArrowKeyInput}
 		aria-label={`range slider for ${label}`}
 	/>
 	<!--Shows the slider value -->
