@@ -287,14 +287,3 @@ The code snippet below is accurate in cases where the component is used as both 
      return value
  ```
  
-# Changelog
-## Build 0.0.1
-Initial release
-
-## Build 0.0.2
-Disabled slider value p-tag element.
-Updated step adjustment by adding or subtracting by `step` instead of `step/2`.
-
-## Build 0.0.3
-Disabled arrow key inputs.
-Shows upper end values close to integers with precision of 5.
