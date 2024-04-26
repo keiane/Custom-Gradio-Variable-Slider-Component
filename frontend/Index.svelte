@@ -70,7 +70,7 @@
 	function adjustValue(event) {
 		let sliderValue = parseFloat(event.target.value);
 		if (Number.isInteger(sliderValue)) {
-			sliderValue += sliderValue + step <= event.target.max ? 0.00001: -0.00001;
+			sliderValue += sliderValue + step <= event.target.max ? 0.00001: 0.00001;
 			value = sliderValue
 		}
 	}
@@ -108,7 +108,8 @@
 				on:blur={clamp}
 				{step}
 				{disabled}
-				readonly
+				on:click={adjustValue}
+				on:input={adjustValue}
 			/>
 		</div>
 	</div>
@@ -123,6 +124,7 @@
 		max={maximum}
 		{step}
 		{disabled}
+		on:click={adjustValue}
 		on:input={adjustValue}
 		aria-label={`range slider for ${label}`}
 	/>
