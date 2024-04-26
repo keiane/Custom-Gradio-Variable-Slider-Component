@@ -249,7 +249,7 @@ function Lt(l) {
   };
 }
 function St(l, t, e) {
-  let { $$slots: n = {}, $$scope: i } = t, { height: f = void 0 } = t, { width: o = void 0 } = t, { elem_id: _ = "" } = t, { elem_classes: s = [] } = t, { variant: a = "solid" } = t, { border_mode: u = "base" } = t, { padding: d = !0 } = t, { type: k = "normal" } = t, { test_id: m = void 0 } = t, { explicit_call: y = !1 } = t, { container: S = !0 } = t, { visible: F = !0 } = t, { allow_overflow: N = !0 } = t, { scale: c = null } = t, { min_width: r = 0 } = t, v = k === "fieldset" ? "fieldset" : "div";
+  let { $$slots: n = {}, $$scope: i } = t, { height: f = void 0 } = t, { width: o = void 0 } = t, { elem_id: _ = "" } = t, { elem_classes: s = [] } = t, { variant: a = "solid" } = t, { border_mode: u = "base" } = t, { padding: c = !0 } = t, { type: k = "normal" } = t, { test_id: m = void 0 } = t, { explicit_call: y = !1 } = t, { container: S = !0 } = t, { visible: F = !0 } = t, { allow_overflow: N = !0 } = t, { scale: d = null } = t, { min_width: r = 0 } = t, v = k === "fieldset" ? "fieldset" : "div";
   const C = (b) => {
     if (b !== void 0) {
       if (typeof b == "number")
@@ -259,7 +259,7 @@ function St(l, t, e) {
     }
   };
   return l.$$set = (b) => {
-    "height" in b && e(0, f = b.height), "width" in b && e(1, o = b.width), "elem_id" in b && e(2, _ = b.elem_id), "elem_classes" in b && e(3, s = b.elem_classes), "variant" in b && e(4, a = b.variant), "border_mode" in b && e(5, u = b.border_mode), "padding" in b && e(6, d = b.padding), "type" in b && e(16, k = b.type), "test_id" in b && e(7, m = b.test_id), "explicit_call" in b && e(8, y = b.explicit_call), "container" in b && e(9, S = b.container), "visible" in b && e(10, F = b.visible), "allow_overflow" in b && e(11, N = b.allow_overflow), "scale" in b && e(12, c = b.scale), "min_width" in b && e(13, r = b.min_width), "$$scope" in b && e(17, i = b.$$scope);
+    "height" in b && e(0, f = b.height), "width" in b && e(1, o = b.width), "elem_id" in b && e(2, _ = b.elem_id), "elem_classes" in b && e(3, s = b.elem_classes), "variant" in b && e(4, a = b.variant), "border_mode" in b && e(5, u = b.border_mode), "padding" in b && e(6, c = b.padding), "type" in b && e(16, k = b.type), "test_id" in b && e(7, m = b.test_id), "explicit_call" in b && e(8, y = b.explicit_call), "container" in b && e(9, S = b.container), "visible" in b && e(10, F = b.visible), "allow_overflow" in b && e(11, N = b.allow_overflow), "scale" in b && e(12, d = b.scale), "min_width" in b && e(13, r = b.min_width), "$$scope" in b && e(17, i = b.$$scope);
   }, [
     f,
     o,
@@ -267,13 +267,13 @@ function St(l, t, e) {
     s,
     a,
     u,
-    d,
+    c,
     m,
     y,
     S,
     F,
     N,
-    c,
+    d,
     r,
     v,
     C,
@@ -316,9 +316,9 @@ const {
   safe_not_equal: At,
   transition_in: Et,
   transition_out: Dt,
-  update_slot_base: Ot
+  update_slot_base: Rt
 } = window.__gradio__svelte__internal;
-function Rt(l) {
+function Ut(l) {
   let t, e;
   const n = (
     /*#slots*/
@@ -339,7 +339,7 @@ function Rt(l) {
     },
     p(f, [o]) {
       i && i.p && (!e || o & /*$$scope*/
-      1) && Ot(
+      1) && Rt(
         i,
         n,
         f,
@@ -369,21 +369,21 @@ function Rt(l) {
     }
   };
 }
-function Ut(l, t, e) {
+function Xt(l, t, e) {
   let { $$slots: n = {}, $$scope: i } = t;
   return l.$$set = (f) => {
     "$$scope" in f && e(0, i = f.$$scope);
   }, [i, n];
 }
-class Xt extends Nt {
+class Yt extends Nt {
   constructor(t) {
-    super(), Zt(this, t, Ut, Rt, At, {});
+    super(), Zt(this, t, Xt, Ut, At, {});
   }
 }
 const {
-  SvelteComponent: Yt,
+  SvelteComponent: Gt,
   attr: ze,
-  check_outros: Gt,
+  check_outros: Ot,
   create_component: Ht,
   create_slot: Jt,
   destroy_component: Kt,
@@ -400,14 +400,14 @@ const {
   set_data: il,
   space: sl,
   text: fl,
-  toggle_class: Q,
+  toggle_class: W,
   transition_in: se,
   transition_out: we,
   update_slot_base: ol
 } = window.__gradio__svelte__internal;
 function Ie(l) {
   let t, e;
-  return t = new Xt({
+  return t = new Yt({
     props: {
       $$slots: { default: [_l] },
       $$scope: { ctx: l }
@@ -478,9 +478,9 @@ function al(l) {
   );
   return {
     c() {
-      t = Qt("span"), o && o.c(), e = sl(), _ && _.c(), n = Wt(), ze(t, "data-testid", "block-info"), ze(t, "class", "svelte-22c38v"), Q(t, "sr-only", !/*show_label*/
-      l[0]), Q(t, "hide", !/*show_label*/
-      l[0]), Q(
+      t = Qt("span"), o && o.c(), e = sl(), _ && _.c(), n = Wt(), ze(t, "data-testid", "block-info"), ze(t, "class", "svelte-22c38v"), W(t, "sr-only", !/*show_label*/
+      l[0]), W(t, "hide", !/*show_label*/
+      l[0]), W(
         t,
         "has-info",
         /*info*/
@@ -510,11 +510,11 @@ function al(l) {
         ),
         null
       ), (!i || a & /*show_label*/
-      1) && Q(t, "sr-only", !/*show_label*/
+      1) && W(t, "sr-only", !/*show_label*/
       s[0]), (!i || a & /*show_label*/
-      1) && Q(t, "hide", !/*show_label*/
+      1) && W(t, "hide", !/*show_label*/
       s[0]), (!i || a & /*info*/
-      2) && Q(
+      2) && W(
         t,
         "has-info",
         /*info*/
@@ -523,7 +523,7 @@ function al(l) {
       s[1] ? _ ? (_.p(s, a), a & /*info*/
       2 && se(_, 1)) : (_ = Ie(s), _.c(), se(_, 1), _.m(n.parentNode, n)) : _ && (el(), we(_, 1, 1, () => {
         _ = null;
-      }), Gt());
+      }), Ot());
     },
     i(s) {
       i || (se(o, s), se(_), i = !0);
@@ -542,7 +542,7 @@ function rl(l, t, e) {
     "show_label" in _ && e(0, f = _.show_label), "info" in _ && e(1, o = _.info), "$$scope" in _ && e(3, i = _.$$scope);
   }, [f, o, n, i];
 }
-class ul extends Yt {
+class ul extends Gt {
   constructor(t) {
     super(), tl(this, t, rl, al, nl, { show_label: 0, info: 1 });
   }
@@ -861,7 +861,7 @@ cl.reduce(
   }),
   {}
 );
-function x(l) {
+function $(l) {
   let t = ["", "k", "M", "G", "T", "P", "E", "Z"], e = 0;
   for (; l > 1e3 && e < t.length - 1; )
     l /= 1e3, e++;
@@ -875,36 +875,36 @@ function dl(l, t) {
 }
 const st = typeof window < "u";
 let Te = st ? () => window.performance.now() : () => Date.now(), ft = st ? (l) => requestAnimationFrame(l) : pe;
-const $ = /* @__PURE__ */ new Set();
+const ee = /* @__PURE__ */ new Set();
 function ot(l) {
-  $.forEach((t) => {
-    t.c(l) || ($.delete(t), t.f());
-  }), $.size !== 0 && ft(ot);
+  ee.forEach((t) => {
+    t.c(l) || (ee.delete(t), t.f());
+  }), ee.size !== 0 && ft(ot);
 }
 function ml(l) {
   let t;
-  return $.size === 0 && ft(ot), {
+  return ee.size === 0 && ft(ot), {
     promise: new Promise((e) => {
-      $.add(t = { c: l, f: e });
+      ee.add(t = { c: l, f: e });
     }),
     abort() {
-      $.delete(t);
+      ee.delete(t);
     }
   };
 }
-const W = [];
+const x = [];
 function bl(l, t = pe) {
   let e;
   const n = /* @__PURE__ */ new Set();
   function i(_) {
     if (dl(l, _) && (l = _, e)) {
-      const s = !W.length;
+      const s = !x.length;
       for (const a of n)
-        a[1](), W.push(a, l);
+        a[1](), x.push(a, l);
       if (s) {
-        for (let a = 0; a < W.length; a += 2)
-          W[a][0](W[a + 1]);
-        W.length = 0;
+        for (let a = 0; a < x.length; a += 2)
+          x[a][0](x[a + 1]);
+        x.length = 0;
       }
     }
   }
@@ -942,16 +942,16 @@ function qe(l, t, e, n) {
 }
 function Be(l, t = {}) {
   const e = bl(l), { stiffness: n = 0.15, damping: i = 0.8, precision: f = 0.01 } = t;
-  let o, _, s, a = l, u = l, d = 1, k = 0, m = !1;
+  let o, _, s, a = l, u = l, c = 1, k = 0, m = !1;
   function y(F, N = {}) {
     u = F;
-    const c = s = {};
-    return l == null || N.hard || S.stiffness >= 1 && S.damping >= 1 ? (m = !0, o = Te(), a = F, e.set(l = u), Promise.resolve()) : (N.soft && (k = 1 / ((N.soft === !0 ? 0.5 : +N.soft) * 60), d = 0), _ || (o = Te(), m = !1, _ = ml((r) => {
+    const d = s = {};
+    return l == null || N.hard || S.stiffness >= 1 && S.damping >= 1 ? (m = !0, o = Te(), a = F, e.set(l = u), Promise.resolve()) : (N.soft && (k = 1 / ((N.soft === !0 ? 0.5 : +N.soft) * 60), c = 0), _ || (o = Te(), m = !1, _ = ml((r) => {
       if (m)
         return m = !1, _ = null, !1;
-      d = Math.min(d + k, 1);
+      c = Math.min(c + k, 1);
       const v = {
-        inv_mass: d,
+        inv_mass: c,
         opts: S,
         settled: !0,
         dt: (r - o) * 60 / 1e3
@@ -959,7 +959,7 @@ function Be(l, t = {}) {
       return o = r, a = l, e.set(l = C), v.settled && (_ = null), !v.settled;
     })), new Promise((r) => {
       _.promise.then(() => {
-        c === s && r();
+        d === s && r();
       });
     }));
   }
@@ -989,12 +989,12 @@ const {
   toggle_class: De
 } = window.__gradio__svelte__internal, { onMount: vl } = window.__gradio__svelte__internal;
 function ql(l) {
-  let t, e, n, i, f, o, _, s, a, u, d, k;
+  let t, e, n, i, f, o, _, s, a, u, c, k;
   return {
     c() {
-      t = wl("div"), e = P("svg"), n = P("g"), i = P("path"), f = P("path"), o = P("path"), _ = P("path"), s = P("g"), a = P("path"), u = P("path"), d = P("path"), k = P("path"), q(i, "d", "M255.926 0.754768L509.702 139.936V221.027L255.926 81.8465V0.754768Z"), q(i, "fill", "#FF7C00"), q(i, "fill-opacity", "0.4"), q(i, "class", "svelte-43sxxs"), q(f, "d", "M509.69 139.936L254.981 279.641V361.255L509.69 221.55V139.936Z"), q(f, "fill", "#FF7C00"), q(f, "class", "svelte-43sxxs"), q(o, "d", "M0.250138 139.937L254.981 279.641V361.255L0.250138 221.55V139.937Z"), q(o, "fill", "#FF7C00"), q(o, "fill-opacity", "0.4"), q(o, "class", "svelte-43sxxs"), q(_, "d", "M255.923 0.232622L0.236328 139.936V221.55L255.923 81.8469V0.232622Z"), q(_, "fill", "#FF7C00"), q(_, "class", "svelte-43sxxs"), ce(n, "transform", "translate(" + /*$top*/
+      t = wl("div"), e = P("svg"), n = P("g"), i = P("path"), f = P("path"), o = P("path"), _ = P("path"), s = P("g"), a = P("path"), u = P("path"), c = P("path"), k = P("path"), q(i, "d", "M255.926 0.754768L509.702 139.936V221.027L255.926 81.8465V0.754768Z"), q(i, "fill", "#FF7C00"), q(i, "fill-opacity", "0.4"), q(i, "class", "svelte-43sxxs"), q(f, "d", "M509.69 139.936L254.981 279.641V361.255L509.69 221.55V139.936Z"), q(f, "fill", "#FF7C00"), q(f, "class", "svelte-43sxxs"), q(o, "d", "M0.250138 139.937L254.981 279.641V361.255L0.250138 221.55V139.937Z"), q(o, "fill", "#FF7C00"), q(o, "fill-opacity", "0.4"), q(o, "class", "svelte-43sxxs"), q(_, "d", "M255.923 0.232622L0.236328 139.936V221.55L255.923 81.8469V0.232622Z"), q(_, "fill", "#FF7C00"), q(_, "class", "svelte-43sxxs"), ce(n, "transform", "translate(" + /*$top*/
       l[1][0] + "px, " + /*$top*/
-      l[1][1] + "px)"), q(a, "d", "M255.926 141.5L509.702 280.681V361.773L255.926 222.592V141.5Z"), q(a, "fill", "#FF7C00"), q(a, "fill-opacity", "0.4"), q(a, "class", "svelte-43sxxs"), q(u, "d", "M509.69 280.679L254.981 420.384V501.998L509.69 362.293V280.679Z"), q(u, "fill", "#FF7C00"), q(u, "class", "svelte-43sxxs"), q(d, "d", "M0.250138 280.681L254.981 420.386V502L0.250138 362.295V280.681Z"), q(d, "fill", "#FF7C00"), q(d, "fill-opacity", "0.4"), q(d, "class", "svelte-43sxxs"), q(k, "d", "M255.923 140.977L0.236328 280.68V362.294L255.923 222.591V140.977Z"), q(k, "fill", "#FF7C00"), q(k, "class", "svelte-43sxxs"), ce(s, "transform", "translate(" + /*$bottom*/
+      l[1][1] + "px)"), q(a, "d", "M255.926 141.5L509.702 280.681V361.773L255.926 222.592V141.5Z"), q(a, "fill", "#FF7C00"), q(a, "fill-opacity", "0.4"), q(a, "class", "svelte-43sxxs"), q(u, "d", "M509.69 280.679L254.981 420.384V501.998L509.69 362.293V280.679Z"), q(u, "fill", "#FF7C00"), q(u, "class", "svelte-43sxxs"), q(c, "d", "M0.250138 280.681L254.981 420.386V502L0.250138 362.295V280.681Z"), q(c, "fill", "#FF7C00"), q(c, "fill-opacity", "0.4"), q(c, "class", "svelte-43sxxs"), q(k, "d", "M255.923 140.977L0.236328 280.68V362.294L255.923 222.591V140.977Z"), q(k, "fill", "#FF7C00"), q(k, "class", "svelte-43sxxs"), ce(s, "transform", "translate(" + /*$bottom*/
       l[2][0] + "px, " + /*$bottom*/
       l[2][1] + "px)"), q(e, "viewBox", "-1200 -1200 3000 3000"), q(e, "fill", "none"), q(e, "xmlns", "http://www.w3.org/2000/svg"), q(e, "class", "svelte-43sxxs"), q(t, "class", "svelte-43sxxs"), De(
         t,
@@ -1004,7 +1004,7 @@ function ql(l) {
       );
     },
     m(m, y) {
-      kl(m, t, y), I(t, e), I(e, n), I(n, i), I(n, f), I(n, o), I(n, _), I(e, s), I(s, a), I(s, u), I(s, d), I(s, k);
+      kl(m, t, y), I(t, e), I(e, n), I(n, i), I(n, f), I(n, o), I(n, _), I(e, s), I(s, a), I(s, u), I(s, c), I(s, k);
     },
     p(m, [y]) {
       y & /*$top*/
@@ -1041,10 +1041,10 @@ function Fl(l, t, e) {
   async function u() {
     await a(), s || u();
   }
-  async function d() {
+  async function c() {
     await Promise.all([o.set([125, 0]), _.set([-125, 0])]), u();
   }
-  return vl(() => (d(), () => s = !0)), l.$$set = (k) => {
+  return vl(() => (c(), () => s = !0)), l.$$set = (k) => {
     "margin" in k && e(0, f = k.margin);
   }, [f, n, i, o, _];
 }
@@ -1055,17 +1055,17 @@ class Cl extends gl {
 }
 const {
   SvelteComponent: Ll,
-  append: J,
+  append: K,
   attr: E,
-  binding_callbacks: Oe,
+  binding_callbacks: Re,
   check_outros: _t,
   create_component: Sl,
   create_slot: jl,
   destroy_component: Nl,
   destroy_each: at,
   detach: w,
-  element: U,
-  empty: le,
+  element: X,
+  empty: ne,
   ensure_array_like: ke,
   get_all_dirty_from_scope: Vl,
   get_slot_changes: Ml,
@@ -1076,19 +1076,19 @@ const {
   noop: Fe,
   safe_not_equal: Pl,
   set_data: z,
-  set_style: Y,
+  set_style: O,
   space: D,
   text: j,
   toggle_class: M,
-  transition_in: ee,
-  transition_out: te,
+  transition_in: te,
+  transition_out: le,
   update_slot_base: Tl
-} = window.__gradio__svelte__internal, { tick: Zl } = window.__gradio__svelte__internal, { onDestroy: Bl } = window.__gradio__svelte__internal, Al = (l) => ({}), Re = (l) => ({});
-function Ue(l, t, e) {
+} = window.__gradio__svelte__internal, { tick: Zl } = window.__gradio__svelte__internal, { onDestroy: Bl } = window.__gradio__svelte__internal, Al = (l) => ({}), Ue = (l) => ({});
+function Xe(l, t, e) {
   const n = l.slice();
   return n[38] = t[e], n[40] = e, n;
 }
-function Xe(l, t, e) {
+function Ye(l, t, e) {
   const n = l.slice();
   return n[38] = t[e], n;
 }
@@ -1105,14 +1105,14 @@ function El(l) {
     l,
     /*$$scope*/
     l[28],
-    Re
+    Ue
   );
   return {
     c() {
-      t = U("span"), n = j(e), i = D(), _ && _.c(), E(t, "class", "error svelte-1yserjw");
+      t = X("span"), n = j(e), i = D(), _ && _.c(), E(t, "class", "error svelte-1yserjw");
     },
     m(s, a) {
-      p(s, t, a), J(t, n), p(s, i, a), _ && _.m(s, a), f = !0;
+      p(s, t, a), K(t, n), p(s, i, a), _ && _.m(s, a), f = !0;
     },
     p(s, a) {
       (!f || a[0] & /*i18n*/
@@ -1134,14 +1134,14 @@ function El(l) {
           /*$$scope*/
           s[28]
         ),
-        Re
+        Ue
       );
     },
     i(s) {
-      f || (ee(_, s), f = !0);
+      f || (te(_, s), f = !0);
     },
     o(s) {
-      te(_, s), f = !1;
+      le(_, s), f = !1;
     },
     d(s) {
       s && (w(t), w(i)), _ && _.d(s);
@@ -1153,32 +1153,32 @@ function Dl(l) {
     /*variant*/
     l[8] === "default" && /*show_eta_bar*/
     l[18] && /*show_progress*/
-    l[6] === "full" && Ye(l)
+    l[6] === "full" && Ge(l)
   );
-  function d(r, v) {
+  function c(r, v) {
     if (
       /*progress*/
       r[7]
     )
-      return Ul;
+      return Xl;
     if (
       /*queue_position*/
       r[2] !== null && /*queue_size*/
       r[3] !== void 0 && /*queue_position*/
       r[2] >= 0
     )
-      return Rl;
+      return Ul;
     if (
       /*queue_position*/
       r[2] === 0
     )
-      return Ol;
+      return Rl;
   }
-  let k = d(l), m = k && k(l), y = (
+  let k = c(l), m = k && k(l), y = (
     /*timer*/
     l[5] && Je(l)
   );
-  const S = [Hl, Gl], F = [];
+  const S = [Hl, Ol], F = [];
   function N(r, v) {
     return (
       /*last_progress_level*/
@@ -1189,11 +1189,11 @@ function Dl(l) {
     );
   }
   ~(f = N(l)) && (o = F[f] = S[f](l));
-  let c = !/*timer*/
+  let d = !/*timer*/
   l[5] && tt(l);
   return {
     c() {
-      u && u.c(), t = D(), e = U("div"), m && m.c(), n = D(), y && y.c(), i = D(), o && o.c(), _ = D(), c && c.c(), s = le(), E(e, "class", "progress-text svelte-1yserjw"), M(
+      u && u.c(), t = D(), e = X("div"), m && m.c(), n = D(), y && y.c(), i = D(), o && o.c(), _ = D(), d && d.c(), s = ne(), E(e, "class", "progress-text svelte-1yserjw"), M(
         e,
         "meta-text-center",
         /*variant*/
@@ -1206,13 +1206,13 @@ function Dl(l) {
       );
     },
     m(r, v) {
-      u && u.m(r, v), p(r, t, v), p(r, e, v), m && m.m(e, null), J(e, n), y && y.m(e, null), p(r, i, v), ~f && F[f].m(r, v), p(r, _, v), c && c.m(r, v), p(r, s, v), a = !0;
+      u && u.m(r, v), p(r, t, v), p(r, e, v), m && m.m(e, null), K(e, n), y && y.m(e, null), p(r, i, v), ~f && F[f].m(r, v), p(r, _, v), d && d.m(r, v), p(r, s, v), a = !0;
     },
     p(r, v) {
       /*variant*/
       r[8] === "default" && /*show_eta_bar*/
       r[18] && /*show_progress*/
-      r[6] === "full" ? u ? u.p(r, v) : (u = Ye(r), u.c(), u.m(t.parentNode, t)) : u && (u.d(1), u = null), k === (k = d(r)) && m ? m.p(r, v) : (m && m.d(1), m = k && k(r), m && (m.c(), m.m(e, n))), /*timer*/
+      r[6] === "full" ? u ? u.p(r, v) : (u = Ge(r), u.c(), u.m(t.parentNode, t)) : u && (u.d(1), u = null), k === (k = c(r)) && m ? m.p(r, v) : (m && m.d(1), m = k && k(r), m && (m.c(), m.m(e, n))), /*timer*/
       r[5] ? y ? y.p(r, v) : (y = Je(r), y.c(), y.m(e, null)) : y && (y.d(1), y = null), (!a || v[0] & /*variant*/
       256) && M(
         e,
@@ -1227,28 +1227,28 @@ function Dl(l) {
         r[8] === "default"
       );
       let C = f;
-      f = N(r), f === C ? ~f && F[f].p(r, v) : (o && (rt(), te(F[C], 1, 1, () => {
+      f = N(r), f === C ? ~f && F[f].p(r, v) : (o && (rt(), le(F[C], 1, 1, () => {
         F[C] = null;
-      }), _t()), ~f ? (o = F[f], o ? o.p(r, v) : (o = F[f] = S[f](r), o.c()), ee(o, 1), o.m(_.parentNode, _)) : o = null), /*timer*/
-      r[5] ? c && (c.d(1), c = null) : c ? c.p(r, v) : (c = tt(r), c.c(), c.m(s.parentNode, s));
+      }), _t()), ~f ? (o = F[f], o ? o.p(r, v) : (o = F[f] = S[f](r), o.c()), te(o, 1), o.m(_.parentNode, _)) : o = null), /*timer*/
+      r[5] ? d && (d.d(1), d = null) : d ? d.p(r, v) : (d = tt(r), d.c(), d.m(s.parentNode, s));
     },
     i(r) {
-      a || (ee(o), a = !0);
+      a || (te(o), a = !0);
     },
     o(r) {
-      te(o), a = !1;
+      le(o), a = !1;
     },
     d(r) {
-      r && (w(t), w(e), w(i), w(_), w(s)), u && u.d(r), m && m.d(), y && y.d(), ~f && F[f].d(r), c && c.d(r);
+      r && (w(t), w(e), w(i), w(_), w(s)), u && u.d(r), m && m.d(), y && y.d(), ~f && F[f].d(r), d && d.d(r);
     }
   };
 }
-function Ye(l) {
+function Ge(l) {
   let t, e = `translateX(${/*eta_level*/
   (l[17] || 0) * 100 - 100}%)`;
   return {
     c() {
-      t = U("div"), E(t, "class", "eta-bar svelte-1yserjw"), Y(t, "transform", e);
+      t = X("div"), E(t, "class", "eta-bar svelte-1yserjw"), O(t, "transform", e);
     },
     m(n, i) {
       p(n, t, i);
@@ -1256,14 +1256,14 @@ function Ye(l) {
     p(n, i) {
       i[0] & /*eta_level*/
       131072 && e !== (e = `translateX(${/*eta_level*/
-      (n[17] || 0) * 100 - 100}%)`) && Y(t, "transform", e);
+      (n[17] || 0) * 100 - 100}%)`) && O(t, "transform", e);
     },
     d(n) {
       n && w(t);
     }
   };
 }
-function Ol(l) {
+function Rl(l) {
   let t;
   return {
     c() {
@@ -1278,7 +1278,7 @@ function Ol(l) {
     }
   };
 }
-function Rl(l) {
+function Ul(l) {
   let t, e = (
     /*queue_position*/
     l[2] + 1 + ""
@@ -1308,18 +1308,18 @@ function Rl(l) {
     }
   };
 }
-function Ul(l) {
+function Xl(l) {
   let t, e = ke(
     /*progress*/
     l[7]
   ), n = [];
   for (let i = 0; i < e.length; i += 1)
-    n[i] = He(Xe(l, e, i));
+    n[i] = He(Ye(l, e, i));
   return {
     c() {
       for (let i = 0; i < n.length; i += 1)
         n[i].c();
-      t = le();
+      t = ne();
     },
     m(i, f) {
       for (let o = 0; o < n.length; o += 1)
@@ -1335,7 +1335,7 @@ function Ul(l) {
         );
         let o;
         for (o = 0; o < e.length; o += 1) {
-          const _ = Xe(i, e, o);
+          const _ = Ye(i, e, o);
           n[o] ? n[o].p(_, f) : (n[o] = He(_), n[o].c(), n[o].m(t.parentNode, t));
         }
         for (; o < n.length; o += 1)
@@ -1348,15 +1348,15 @@ function Ul(l) {
     }
   };
 }
-function Ge(l) {
+function Oe(l) {
   let t, e = (
     /*p*/
     l[38].unit + ""
   ), n, i, f = " ", o;
-  function _(u, d) {
+  function _(u, c) {
     return (
       /*p*/
-      u[38].length != null ? Yl : Xl
+      u[38].length != null ? Gl : Yl
     );
   }
   let s = _(l), a = s(l);
@@ -1364,11 +1364,11 @@ function Ge(l) {
     c() {
       a.c(), t = D(), n = j(e), i = j(" | "), o = j(f);
     },
-    m(u, d) {
-      a.m(u, d), p(u, t, d), p(u, n, d), p(u, i, d), p(u, o, d);
+    m(u, c) {
+      a.m(u, c), p(u, t, c), p(u, n, c), p(u, i, c), p(u, o, c);
     },
-    p(u, d) {
-      s === (s = _(u)) && a ? a.p(u, d) : (a.d(1), a = s(u), a && (a.c(), a.m(t.parentNode, t))), d[0] & /*progress*/
+    p(u, c) {
+      s === (s = _(u)) && a ? a.p(u, c) : (a.d(1), a = s(u), a && (a.c(), a.m(t.parentNode, t))), c[0] & /*progress*/
       128 && e !== (e = /*p*/
       u[38].unit + "") && z(n, e);
     },
@@ -1377,8 +1377,8 @@ function Ge(l) {
     }
   };
 }
-function Xl(l) {
-  let t = x(
+function Yl(l) {
+  let t = $(
     /*p*/
     l[38].index || 0
   ) + "", e;
@@ -1391,7 +1391,7 @@ function Xl(l) {
     },
     p(n, i) {
       i[0] & /*progress*/
-      128 && t !== (t = x(
+      128 && t !== (t = $(
         /*p*/
         n[38].index || 0
       ) + "") && z(e, t);
@@ -1401,11 +1401,11 @@ function Xl(l) {
     }
   };
 }
-function Yl(l) {
-  let t = x(
+function Gl(l) {
+  let t = $(
     /*p*/
     l[38].index || 0
-  ) + "", e, n, i = x(
+  ) + "", e, n, i = $(
     /*p*/
     l[38].length
   ) + "", f;
@@ -1418,11 +1418,11 @@ function Yl(l) {
     },
     p(o, _) {
       _[0] & /*progress*/
-      128 && t !== (t = x(
+      128 && t !== (t = $(
         /*p*/
         o[38].index || 0
       ) + "") && z(e, t), _[0] & /*progress*/
-      128 && i !== (i = x(
+      128 && i !== (i = $(
         /*p*/
         o[38].length
       ) + "") && z(f, i);
@@ -1435,18 +1435,18 @@ function Yl(l) {
 function He(l) {
   let t, e = (
     /*p*/
-    l[38].index != null && Ge(l)
+    l[38].index != null && Oe(l)
   );
   return {
     c() {
-      e && e.c(), t = le();
+      e && e.c(), t = ne();
     },
     m(n, i) {
       e && e.m(n, i), p(n, t, i);
     },
     p(n, i) {
       /*p*/
-      n[38].index != null ? e ? e.p(n, i) : (e = Ge(n), e.c(), e.m(t.parentNode, t)) : e && (e.d(1), e = null);
+      n[38].index != null ? e ? e.p(n, i) : (e = Oe(n), e.c(), e.m(t.parentNode, t)) : e && (e.d(1), e = null);
     },
     d(n) {
       n && w(t), e && e.d(n);
@@ -1485,7 +1485,7 @@ function Je(l) {
     }
   };
 }
-function Gl(l) {
+function Ol(l) {
   let t, e;
   return t = new Cl({
     props: { margin: (
@@ -1506,10 +1506,10 @@ function Gl(l) {
       n[8] === "default"), t.$set(f);
     },
     i(n) {
-      e || (ee(t.$$.fragment, n), e = !0);
+      e || (te(t.$$.fragment, n), e = !0);
     },
     o(n) {
-      te(t.$$.fragment, n), e = !1;
+      le(t.$$.fragment, n), e = !1;
     },
     d(n) {
       Nl(t, n);
@@ -1524,16 +1524,16 @@ function Hl(l) {
   );
   return {
     c() {
-      t = U("div"), e = U("div"), _ && _.c(), n = D(), i = U("div"), f = U("div"), E(e, "class", "progress-level-inner svelte-1yserjw"), E(f, "class", "progress-bar svelte-1yserjw"), Y(f, "width", o), E(i, "class", "progress-bar-wrap svelte-1yserjw"), E(t, "class", "progress-level svelte-1yserjw");
+      t = X("div"), e = X("div"), _ && _.c(), n = D(), i = X("div"), f = X("div"), E(e, "class", "progress-level-inner svelte-1yserjw"), E(f, "class", "progress-bar svelte-1yserjw"), O(f, "width", o), E(i, "class", "progress-bar-wrap svelte-1yserjw"), E(t, "class", "progress-level svelte-1yserjw");
     },
     m(s, a) {
-      p(s, t, a), J(t, e), _ && _.m(e, null), J(t, n), J(t, i), J(i, f), l[30](f);
+      p(s, t, a), K(t, e), _ && _.m(e, null), K(t, n), K(t, i), K(i, f), l[30](f);
     },
     p(s, a) {
       /*progress*/
       s[7] != null ? _ ? _.p(s, a) : (_ = Ke(s), _.c(), _.m(e, null)) : _ && (_.d(1), _ = null), a[0] & /*last_progress_level*/
       32768 && o !== (o = `${/*last_progress_level*/
-      s[15] * 100}%`) && Y(f, "width", o);
+      s[15] * 100}%`) && O(f, "width", o);
     },
     i: Fe,
     o: Fe,
@@ -1548,12 +1548,12 @@ function Ke(l) {
     l[7]
   ), n = [];
   for (let i = 0; i < e.length; i += 1)
-    n[i] = et(Ue(l, e, i));
+    n[i] = et(Xe(l, e, i));
   return {
     c() {
       for (let i = 0; i < n.length; i += 1)
         n[i].c();
-      t = le();
+      t = ne();
     },
     m(i, f) {
       for (let o = 0; o < n.length; o += 1)
@@ -1569,7 +1569,7 @@ function Ke(l) {
         );
         let o;
         for (o = 0; o < e.length; o += 1) {
-          const _ = Ue(i, e, o);
+          const _ = Xe(i, e, o);
           n[o] ? n[o].p(_, f) : (n[o] = et(_), n[o].c(), n[o].m(t.parentNode, t));
         }
         for (; o < n.length; o += 1)
@@ -1603,7 +1603,7 @@ function Qe(l) {
   );
   return {
     c() {
-      f && f.c(), t = D(), o && o.c(), e = D(), _ && _.c(), n = D(), s && s.c(), i = le();
+      f && f.c(), t = D(), o && o.c(), e = D(), _ && _.c(), n = D(), s && s.c(), i = ne();
     },
     m(a, u) {
       f && f.m(a, u), p(a, t, u), o && o.m(a, u), p(a, e, u), _ && _.m(a, u), p(a, n, u), s && s.m(a, u), p(a, i, u);
@@ -1712,7 +1712,7 @@ function et(l) {
   );
   return {
     c() {
-      e && e.c(), t = le();
+      e && e.c(), t = ne();
     },
     m(n, i) {
       e && e.m(n, i), p(n, t, i);
@@ -1735,13 +1735,13 @@ function tt(l) {
   let t, e;
   return {
     c() {
-      t = U("p"), e = j(
+      t = X("p"), e = j(
         /*loading_text*/
         l[9]
       ), E(t, "class", "loading svelte-1yserjw");
     },
     m(n, i) {
-      p(n, t, i), J(t, e);
+      p(n, t, i), K(t, e);
     },
     p(n, i) {
       i[0] & /*loading_text*/
@@ -1770,7 +1770,7 @@ function Kl(l) {
   }
   return ~(e = s(l)) && (n = _[e] = o[e](l)), {
     c() {
-      t = U("div"), n && n.c(), E(t, "class", i = "wrap " + /*variant*/
+      t = X("div"), n && n.c(), E(t, "class", i = "wrap " + /*variant*/
       l[8] + " " + /*show_progress*/
       l[6] + " svelte-1yserjw"), M(t, "hide", !/*status*/
       l[4] || /*status*/
@@ -1794,12 +1794,12 @@ function Kl(l) {
         "border",
         /*border*/
         l[12]
-      ), Y(
+      ), O(
         t,
         "position",
         /*absolute*/
         l[10] ? "absolute" : "static"
-      ), Y(
+      ), O(
         t,
         "padding",
         /*absolute*/
@@ -1810,10 +1810,10 @@ function Kl(l) {
       p(a, t, u), ~e && _[e].m(t, null), l[31](t), f = !0;
     },
     p(a, u) {
-      let d = e;
-      e = s(a), e === d ? ~e && _[e].p(a, u) : (n && (rt(), te(_[d], 1, 1, () => {
-        _[d] = null;
-      }), _t()), ~e ? (n = _[e], n ? n.p(a, u) : (n = _[e] = o[e](a), n.c()), ee(n, 1), n.m(t, null)) : n = null), (!f || u[0] & /*variant, show_progress*/
+      let c = e;
+      e = s(a), e === c ? ~e && _[e].p(a, u) : (n && (rt(), le(_[c], 1, 1, () => {
+        _[c] = null;
+      }), _t()), ~e ? (n = _[e], n ? n.p(a, u) : (n = _[e] = o[e](a), n.c()), te(n, 1), n.m(t, null)) : n = null), (!f || u[0] & /*variant, show_progress*/
       320 && i !== (i = "wrap " + /*variant*/
       a[8] + " " + /*show_progress*/
       a[6] + " svelte-1yserjw")) && E(t, "class", i), (!f || u[0] & /*variant, show_progress, status, show_progress*/
@@ -1843,13 +1843,13 @@ function Kl(l) {
         /*border*/
         a[12]
       ), u[0] & /*absolute*/
-      1024 && Y(
+      1024 && O(
         t,
         "position",
         /*absolute*/
         a[10] ? "absolute" : "static"
       ), u[0] & /*absolute*/
-      1024 && Y(
+      1024 && O(
         t,
         "padding",
         /*absolute*/
@@ -1857,10 +1857,10 @@ function Kl(l) {
       );
     },
     i(a) {
-      f || (ee(n), f = !0);
+      f || (te(n), f = !0);
     },
     o(a) {
-      te(n), f = !1;
+      le(n), f = !1;
     },
     d(a) {
       a && w(t), ~e && _[e].d(), l[31](null);
@@ -1885,49 +1885,49 @@ async function Ql(l, t = !0) {
   }
 }
 function Wl(l, t, e) {
-  let n, { $$slots: i = {}, $$scope: f } = t, { i18n: o } = t, { eta: _ = null } = t, { queue_position: s } = t, { queue_size: a } = t, { status: u } = t, { scroll_to_output: d = !1 } = t, { timer: k = !0 } = t, { show_progress: m = "full" } = t, { message: y = null } = t, { progress: S = null } = t, { variant: F = "default" } = t, { loading_text: N = "Loading..." } = t, { absolute: c = !0 } = t, { translucent: r = !1 } = t, { border: v = !1 } = t, { autoscroll: C } = t, b, G = !1, K = 0, O = 0, X = null, T = null, _e = 0, R = null, H, Z = null, ae = !0;
+  let n, { $$slots: i = {}, $$scope: f } = t, { i18n: o } = t, { eta: _ = null } = t, { queue_position: s } = t, { queue_size: a } = t, { status: u } = t, { scroll_to_output: c = !1 } = t, { timer: k = !0 } = t, { show_progress: m = "full" } = t, { message: y = null } = t, { progress: S = null } = t, { variant: F = "default" } = t, { loading_text: N = "Loading..." } = t, { absolute: d = !0 } = t, { translucent: r = !1 } = t, { border: v = !1 } = t, { autoscroll: C } = t, b, H = !1, Q = 0, R = 0, Y = null, T = null, _e = 0, U = null, J, Z = null, ae = !0;
   const g = () => {
-    e(0, _ = e(26, X = e(19, ue = null))), e(24, K = performance.now()), e(25, O = 0), G = !0, B();
+    e(0, _ = e(26, Y = e(19, ue = null))), e(24, Q = performance.now()), e(25, R = 0), H = !0, B();
   };
   function B() {
     requestAnimationFrame(() => {
-      e(25, O = (performance.now() - K) / 1e3), G && B();
+      e(25, R = (performance.now() - Q) / 1e3), H && B();
     });
   }
   function re() {
-    e(25, O = 0), e(0, _ = e(26, X = e(19, ue = null))), G && (G = !1);
+    e(25, R = 0), e(0, _ = e(26, Y = e(19, ue = null))), H && (H = !1);
   }
   Bl(() => {
-    G && re();
+    H && re();
   });
   let ue = null;
   function ut(h) {
-    Oe[h ? "unshift" : "push"](() => {
-      Z = h, e(16, Z), e(7, S), e(14, R), e(15, H);
+    Re[h ? "unshift" : "push"](() => {
+      Z = h, e(16, Z), e(7, S), e(14, U), e(15, J);
     });
   }
   function ct(h) {
-    Oe[h ? "unshift" : "push"](() => {
+    Re[h ? "unshift" : "push"](() => {
       b = h, e(13, b);
     });
   }
   return l.$$set = (h) => {
-    "i18n" in h && e(1, o = h.i18n), "eta" in h && e(0, _ = h.eta), "queue_position" in h && e(2, s = h.queue_position), "queue_size" in h && e(3, a = h.queue_size), "status" in h && e(4, u = h.status), "scroll_to_output" in h && e(21, d = h.scroll_to_output), "timer" in h && e(5, k = h.timer), "show_progress" in h && e(6, m = h.show_progress), "message" in h && e(22, y = h.message), "progress" in h && e(7, S = h.progress), "variant" in h && e(8, F = h.variant), "loading_text" in h && e(9, N = h.loading_text), "absolute" in h && e(10, c = h.absolute), "translucent" in h && e(11, r = h.translucent), "border" in h && e(12, v = h.border), "autoscroll" in h && e(23, C = h.autoscroll), "$$scope" in h && e(28, f = h.$$scope);
+    "i18n" in h && e(1, o = h.i18n), "eta" in h && e(0, _ = h.eta), "queue_position" in h && e(2, s = h.queue_position), "queue_size" in h && e(3, a = h.queue_size), "status" in h && e(4, u = h.status), "scroll_to_output" in h && e(21, c = h.scroll_to_output), "timer" in h && e(5, k = h.timer), "show_progress" in h && e(6, m = h.show_progress), "message" in h && e(22, y = h.message), "progress" in h && e(7, S = h.progress), "variant" in h && e(8, F = h.variant), "loading_text" in h && e(9, N = h.loading_text), "absolute" in h && e(10, d = h.absolute), "translucent" in h && e(11, r = h.translucent), "border" in h && e(12, v = h.border), "autoscroll" in h && e(23, C = h.autoscroll), "$$scope" in h && e(28, f = h.$$scope);
   }, l.$$.update = () => {
     l.$$.dirty[0] & /*eta, old_eta, timer_start, eta_from_start*/
-    218103809 && (_ === null && e(0, _ = X), _ != null && X !== _ && (e(27, T = (performance.now() - K) / 1e3 + _), e(19, ue = T.toFixed(1)), e(26, X = _))), l.$$.dirty[0] & /*eta_from_start, timer_diff*/
-    167772160 && e(17, _e = T === null || T <= 0 || !O ? null : Math.min(O / T, 1)), l.$$.dirty[0] & /*progress*/
+    218103809 && (_ === null && e(0, _ = Y), _ != null && Y !== _ && (e(27, T = (performance.now() - Q) / 1e3 + _), e(19, ue = T.toFixed(1)), e(26, Y = _))), l.$$.dirty[0] & /*eta_from_start, timer_diff*/
+    167772160 && e(17, _e = T === null || T <= 0 || !R ? null : Math.min(R / T, 1)), l.$$.dirty[0] & /*progress*/
     128 && S != null && e(18, ae = !1), l.$$.dirty[0] & /*progress, progress_level, progress_bar, last_progress_level*/
-    114816 && (S != null ? e(14, R = S.map((h) => {
+    114816 && (S != null ? e(14, U = S.map((h) => {
       if (h.index != null && h.length != null)
         return h.index / h.length;
       if (h.progress != null)
         return h.progress;
-    })) : e(14, R = null), R ? (e(15, H = R[R.length - 1]), Z && (H === 0 ? e(16, Z.style.transition = "0", Z) : e(16, Z.style.transition = "150ms", Z))) : e(15, H = void 0)), l.$$.dirty[0] & /*status*/
+    })) : e(14, U = null), U ? (e(15, J = U[U.length - 1]), Z && (J === 0 ? e(16, Z.style.transition = "0", Z) : e(16, Z.style.transition = "150ms", Z))) : e(15, J = void 0)), l.$$.dirty[0] & /*status*/
     16 && (u === "pending" ? g() : re()), l.$$.dirty[0] & /*el, scroll_to_output, status, autoscroll*/
-    10493968 && b && d && (u === "pending" || u === "complete") && Ql(b, C), l.$$.dirty[0] & /*status, message*/
+    10493968 && b && c && (u === "pending" || u === "complete") && Ql(b, C), l.$$.dirty[0] & /*status, message*/
     4194320, l.$$.dirty[0] & /*timer_diff*/
-    33554432 && e(20, n = O.toFixed(1));
+    33554432 && e(20, n = R.toFixed(1));
   }, [
     _,
     o,
@@ -1939,23 +1939,23 @@ function Wl(l, t, e) {
     S,
     F,
     N,
-    c,
+    d,
     r,
     v,
     b,
-    R,
-    H,
+    U,
+    J,
     Z,
     _e,
     ae,
     ue,
     n,
-    d,
+    c,
     y,
     C,
-    K,
-    O,
-    X,
+    Q,
+    R,
+    Y,
     T,
     f,
     i,
@@ -2003,12 +2003,12 @@ const {
   create_component: Ce,
   destroy_component: Le,
   detach: fe,
-  element: ne,
+  element: ie,
   get_spread_object: tn,
   get_spread_update: ln,
   init: nn,
   insert: oe,
-  listen: ie,
+  listen: G,
   mount_component: Se,
   run_all: sn,
   safe_not_equal: fn,
@@ -2046,7 +2046,7 @@ function rn(l) {
   };
 }
 function un(l) {
-  let t, e, n, i, f, o, _, s, a, u, d, k, m, y, S;
+  let t, e, n, i, f, o, _, s, a, u, c, k, m, y, S;
   const F = [
     { autoscroll: (
       /*gradio*/
@@ -2060,8 +2060,8 @@ function un(l) {
     l[14]
   ];
   let N = {};
-  for (let c = 0; c < F.length; c += 1)
-    N = en(N, F[c]);
+  for (let d = 0; d < F.length; d += 1)
+    N = en(N, F[d]);
   return t = new xl({ props: N }), o = new ul({
     props: {
       show_label: (
@@ -2077,7 +2077,7 @@ function un(l) {
     }
   }), {
     c() {
-      Ce(t.$$.fragment), e = ve(), n = ne("div"), i = ne("div"), f = ne("label"), Ce(o.$$.fragment), _ = ve(), s = ne("input"), u = ve(), d = ne("input"), L(
+      Ce(t.$$.fragment), e = ve(), n = ie("div"), i = ie("div"), f = ie("label"), Ce(o.$$.fragment), _ = ve(), s = ie("input"), u = ve(), c = ie("input"), L(
         f,
         "for",
         /*id*/
@@ -2099,164 +2099,182 @@ function un(l) {
         /*step*/
         l[12]
       ), s.disabled = /*disabled*/
-      l[17], s.readOnly = !0, L(s, "class", "svelte-o2qgeu"), L(i, "class", "head svelte-o2qgeu"), L(n, "class", "wrap svelte-o2qgeu"), L(d, "type", "range"), L(
-        d,
+      l[17], L(s, "class", "svelte-o2qgeu"), L(i, "class", "head svelte-o2qgeu"), L(n, "class", "wrap svelte-o2qgeu"), L(c, "type", "range"), L(
+        c,
         "id",
         /*id*/
         l[18]
-      ), L(d, "name", "cowbell"), L(
-        d,
+      ), L(c, "name", "cowbell"), L(
+        c,
         "min",
         /*minimum*/
         l[10]
       ), L(
-        d,
+        c,
         "max",
         /*maximum*/
         l[11]
       ), L(
-        d,
+        c,
         "step",
         /*step*/
         l[12]
-      ), d.disabled = /*disabled*/
-      l[17], L(d, "aria-label", k = `range slider for ${/*label*/
-      l[5]}`), L(d, "class", "svelte-o2qgeu");
+      ), c.disabled = /*disabled*/
+      l[17], L(c, "aria-label", k = `range slider for ${/*label*/
+      l[5]}`), L(c, "class", "svelte-o2qgeu");
     },
-    m(c, r) {
-      Se(t, c, r), oe(c, e, r), oe(c, n, r), me(n, i), me(i, f), Se(o, f, null), me(i, _), me(i, s), be(
+    m(d, r) {
+      Se(t, d, r), oe(d, e, r), oe(d, n, r), me(n, i), me(i, f), Se(o, f, null), me(i, _), me(i, s), be(
         s,
         /*value*/
         l[0]
-      ), l[24](s), oe(c, u, r), oe(c, d, r), be(
-        d,
+      ), l[24](s), oe(d, u, r), oe(d, c, r), be(
+        c,
         /*value*/
         l[0]
-      ), l[26](d), m = !0, y || (S = [
-        ie(
+      ), l[26](c), m = !0, y || (S = [
+        G(
           s,
           "input",
           /*input0_input_handler*/
           l[23]
         ),
-        ie(
+        G(
           s,
           "blur",
           /*clamp*/
           l[19]
         ),
-        ie(
-          d,
+        G(
+          s,
+          "click",
+          /*adjustValue*/
+          l[20]
+        ),
+        G(
+          s,
+          "input",
+          /*adjustValue*/
+          l[20]
+        ),
+        G(
+          c,
           "change",
           /*input1_change_input_handler*/
           l[25]
         ),
-        ie(
-          d,
+        G(
+          c,
           "input",
           /*input1_change_input_handler*/
           l[25]
         ),
-        ie(
-          d,
+        G(
+          c,
+          "click",
+          /*adjustValue*/
+          l[20]
+        ),
+        G(
+          c,
           "input",
           /*adjustValue*/
           l[20]
         )
       ], y = !0);
     },
-    p(c, r) {
+    p(d, r) {
       const v = r[0] & /*gradio, loading_status*/
       16386 ? ln(F, [
         r[0] & /*gradio*/
         2 && { autoscroll: (
           /*gradio*/
-          c[1].autoscroll
+          d[1].autoscroll
         ) },
         r[0] & /*gradio*/
         2 && { i18n: (
           /*gradio*/
-          c[1].i18n
+          d[1].i18n
         ) },
         r[0] & /*loading_status*/
         16384 && tn(
           /*loading_status*/
-          c[14]
+          d[14]
         )
       ]) : {};
       t.$set(v);
       const C = {};
       r[0] & /*show_label*/
       8192 && (C.show_label = /*show_label*/
-      c[13]), r[0] & /*info*/
+      d[13]), r[0] & /*info*/
       64 && (C.info = /*info*/
-      c[6]), r[0] & /*label*/
+      d[6]), r[0] & /*label*/
       32 | r[1] & /*$$scope*/
-      1 && (C.$$scope = { dirty: r, ctx: c }), o.$set(C), (!m || r[0] & /*label*/
+      1 && (C.$$scope = { dirty: r, ctx: d }), o.$set(C), (!m || r[0] & /*label*/
       32 && a !== (a = `number input for ${/*label*/
-      c[5]}`)) && L(s, "aria-label", a), (!m || r[0] & /*minimum*/
+      d[5]}`)) && L(s, "aria-label", a), (!m || r[0] & /*minimum*/
       1024) && L(
         s,
         "min",
         /*minimum*/
-        c[10]
+        d[10]
       ), (!m || r[0] & /*maximum*/
       2048) && L(
         s,
         "max",
         /*maximum*/
-        c[11]
+        d[11]
       ), (!m || r[0] & /*step*/
       4096) && L(
         s,
         "step",
         /*step*/
-        c[12]
+        d[12]
       ), (!m || r[0] & /*disabled*/
       131072) && (s.disabled = /*disabled*/
-      c[17]), r[0] & /*value*/
+      d[17]), r[0] & /*value*/
       1 && je(s.value) !== /*value*/
-      c[0] && be(
+      d[0] && be(
         s,
         /*value*/
-        c[0]
+        d[0]
       ), (!m || r[0] & /*minimum*/
       1024) && L(
-        d,
+        c,
         "min",
         /*minimum*/
-        c[10]
+        d[10]
       ), (!m || r[0] & /*maximum*/
       2048) && L(
-        d,
+        c,
         "max",
         /*maximum*/
-        c[11]
+        d[11]
       ), (!m || r[0] & /*step*/
       4096) && L(
-        d,
+        c,
         "step",
         /*step*/
-        c[12]
+        d[12]
       ), (!m || r[0] & /*disabled*/
-      131072) && (d.disabled = /*disabled*/
-      c[17]), (!m || r[0] & /*label*/
+      131072) && (c.disabled = /*disabled*/
+      d[17]), (!m || r[0] & /*label*/
       32 && k !== (k = `range slider for ${/*label*/
-      c[5]}`)) && L(d, "aria-label", k), r[0] & /*value*/
+      d[5]}`)) && L(c, "aria-label", k), r[0] & /*value*/
       1 && be(
-        d,
+        c,
         /*value*/
-        c[0]
+        d[0]
       );
     },
-    i(c) {
-      m || (Ne(t.$$.fragment, c), Ne(o.$$.fragment, c), m = !0);
+    i(d) {
+      m || (Ne(t.$$.fragment, d), Ne(o.$$.fragment, d), m = !0);
     },
-    o(c) {
-      Ve(t.$$.fragment, c), Ve(o.$$.fragment, c), m = !1;
+    o(d) {
+      Ve(t.$$.fragment, d), Ve(o.$$.fragment, d), m = !1;
     },
-    d(c) {
-      c && (fe(e), fe(n), fe(u), fe(d)), Le(t, c), Le(o), l[24](null), l[26](null), y = !1, sn(S);
+    d(d) {
+      d && (fe(e), fe(n), fe(u), fe(c)), Le(t, d), Le(o), l[24](null), l[26](null), y = !1, sn(S);
     }
   };
 }
@@ -2329,18 +2347,18 @@ function cn(l) {
 }
 let dn = 0;
 function mn(l, t, e) {
-  let n, { gradio: i } = t, { elem_id: f = "" } = t, { elem_classes: o = [] } = t, { visible: _ = !0 } = t, { value: s = 0 } = t, { label: a = i.i18n("slider.slider") } = t, { info: u = void 0 } = t, { container: d = !0 } = t, { scale: k = null } = t, { min_width: m = void 0 } = t, { minimum: y } = t, { maximum: S = 100 } = t, { step: F } = t, { show_label: N } = t, { interactive: c } = t, { loading_status: r } = t, { value_is_output: v = !1 } = t, C, b;
-  const G = `range_id_${dn++}`;
-  function K() {
+  let n, { gradio: i } = t, { elem_id: f = "" } = t, { elem_classes: o = [] } = t, { visible: _ = !0 } = t, { value: s = 0 } = t, { label: a = i.i18n("slider.slider") } = t, { info: u = void 0 } = t, { container: c = !0 } = t, { scale: k = null } = t, { min_width: m = void 0 } = t, { minimum: y } = t, { maximum: S = 100 } = t, { step: F } = t, { show_label: N } = t, { interactive: d } = t, { loading_status: r } = t, { value_is_output: v = !1 } = t, C, b;
+  const H = `range_id_${dn++}`;
+  function Q() {
     i.dispatch("change"), v || i.dispatch("input");
   }
   an(() => {
-    e(21, v = !1), X();
+    e(21, v = !1), Y();
   });
-  function O() {
+  function R() {
     i.dispatch("release", s), e(0, s = Math.min(Math.max(s, y), S));
   }
-  function X() {
+  function Y() {
     T(), C.addEventListener("input", T), b.addEventListener("input", T);
   }
   function T() {
@@ -2349,12 +2367,12 @@ function mn(l, t, e) {
   }
   function _e(g) {
     let B = parseFloat(g.target.value);
-    Number.isInteger(B) && (B += B + F <= g.target.max ? 1e-5 : -1e-5, e(0, s = B));
+    Number.isInteger(B) && (B += (B + F <= g.target.max, 1e-5), e(0, s = B));
   }
-  function R() {
+  function U() {
     s = je(this.value), e(0, s);
   }
-  function H(g) {
+  function J(g) {
     lt[g ? "unshift" : "push"](() => {
       b = g, e(16, b);
     });
@@ -2368,11 +2386,11 @@ function mn(l, t, e) {
     });
   }
   return l.$$set = (g) => {
-    "gradio" in g && e(1, i = g.gradio), "elem_id" in g && e(2, f = g.elem_id), "elem_classes" in g && e(3, o = g.elem_classes), "visible" in g && e(4, _ = g.visible), "value" in g && e(0, s = g.value), "label" in g && e(5, a = g.label), "info" in g && e(6, u = g.info), "container" in g && e(7, d = g.container), "scale" in g && e(8, k = g.scale), "min_width" in g && e(9, m = g.min_width), "minimum" in g && e(10, y = g.minimum), "maximum" in g && e(11, S = g.maximum), "step" in g && e(12, F = g.step), "show_label" in g && e(13, N = g.show_label), "interactive" in g && e(22, c = g.interactive), "loading_status" in g && e(14, r = g.loading_status), "value_is_output" in g && e(21, v = g.value_is_output);
+    "gradio" in g && e(1, i = g.gradio), "elem_id" in g && e(2, f = g.elem_id), "elem_classes" in g && e(3, o = g.elem_classes), "visible" in g && e(4, _ = g.visible), "value" in g && e(0, s = g.value), "label" in g && e(5, a = g.label), "info" in g && e(6, u = g.info), "container" in g && e(7, c = g.container), "scale" in g && e(8, k = g.scale), "min_width" in g && e(9, m = g.min_width), "minimum" in g && e(10, y = g.minimum), "maximum" in g && e(11, S = g.maximum), "step" in g && e(12, F = g.step), "show_label" in g && e(13, N = g.show_label), "interactive" in g && e(22, d = g.interactive), "loading_status" in g && e(14, r = g.loading_status), "value_is_output" in g && e(21, v = g.value_is_output);
   }, l.$$.update = () => {
     l.$$.dirty[0] & /*interactive*/
-    4194304 && e(17, n = !c), l.$$.dirty[0] & /*value*/
-    1 && K();
+    4194304 && e(17, n = !d), l.$$.dirty[0] & /*value*/
+    1 && Q();
   }, [
     s,
     i,
@@ -2381,7 +2399,7 @@ function mn(l, t, e) {
     _,
     a,
     u,
-    d,
+    c,
     k,
     m,
     y,
@@ -2392,13 +2410,13 @@ function mn(l, t, e) {
     C,
     b,
     n,
-    G,
-    O,
+    H,
+    R,
     _e,
     v,
-    c,
-    R,
-    H,
+    d,
+    U,
+    J,
     Z,
     ae
   ];
